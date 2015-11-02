@@ -9,6 +9,7 @@
 import Foundation
 import Parse
 import Bond
+import ConvenienceKit
 
 // custom Parse class (must inherit from PFObject & implement PFSubclassing protocol
 class Post: PFObject, PFSubclassing {
