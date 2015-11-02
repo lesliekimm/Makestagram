@@ -43,6 +43,7 @@
 		62C8C1ED1B06BD6500DC3EA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C8C1EC1B06BD6500DC3EA7 /* Images.xcassets */; };
 		62C8C1F01B06BD6500DC3EA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C8C1EE1B06BD6500DC3EA7 /* LaunchScreen.xib */; };
 		62C8C1FC1B06BD6500DC3EA7 /* MakestagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C8C1FB1B06BD6500DC3EA7 /* MakestagramTests.swift */; };
+		813DAC151BE7F9EB0072E0D0 /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DAC141BE7F9EB0072E0D0 /* FriendSearchTableViewCell.swift */; };
 		8186816F1BE3EB5E003D1B4A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8186816E1BE3EB5E003D1B4A /* TimelineViewController.swift */; };
 		818681711BE3EB6C003D1B4A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818681701BE3EB6C003D1B4A /* PhotoViewController.swift */; };
 		818681731BE3EB76003D1B4A /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818681721BE3EB76003D1B4A /* FriendSearchViewController.swift */; };
@@ -188,6 +189,7 @@
 		62C8C1F51B06BD6500DC3EA7 /* MakestagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakestagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C8C1FA1B06BD6500DC3EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62C8C1FB1B06BD6500DC3EA7 /* MakestagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakestagramTests.swift; sourceTree = "<group>"; };
+		813DAC141BE7F9EB0072E0D0 /* FriendSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchTableViewCell.swift; sourceTree = "<group>"; };
 		8186816E1BE3EB5E003D1B4A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		818681701BE3EB6C003D1B4A /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		818681721BE3EB76003D1B4A /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +390,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		813DAC0B1BE7F9A20072E0D0 /* FriendSearch */ = {
+			isa = PBXGroup;
+			children = (
+				813DAC141BE7F9EB0072E0D0 /* FriendSearchTableViewCell.swift */,
+			);
+			path = FriendSearch;
+			sourceTree = "<group>";
+		};
 		818681741BE3F1EF003D1B4A /* PhotoTaking */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +417,7 @@
 		818681821BE43FBA003D1B4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				813DAC0B1BE7F9A20072E0D0 /* FriendSearch */,
 				818681831BE43FBA003D1B4A /* Timeline */,
 			);
 			path = Views;
@@ -609,6 +620,7 @@
 				8186816F1BE3EB5E003D1B4A /* TimelineViewController.swift in Sources */,
 				818681761BE3F210003D1B4A /* PhotoTakingHelper.swift in Sources */,
 				818681711BE3EB6C003D1B4A /* PhotoViewController.swift in Sources */,
+				813DAC151BE7F9EB0072E0D0 /* FriendSearchTableViewCell.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
 				8186818B1BE54DE2003D1B4A /* ParseHelper.swift in Sources */,

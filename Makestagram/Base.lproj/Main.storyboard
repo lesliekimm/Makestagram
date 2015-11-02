@@ -185,13 +185,16 @@
                                     <constraint firstAttribute="height" constant="44" id="593-xO-Edk"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="S7H-hO-w34" id="vtG-if-Bhu"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-Uj-eB6">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="0fe-aa-BWR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="49" id="0fe-aa-BWR" customClass="FriendSearchTableViewCell" customModule="Makestagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0fe-aa-BWR" id="ob9-0B-hX8">
@@ -218,6 +221,9 @@
                                                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     <state key="normal" image="Add"/>
                                                     <state key="selected" image="Check"/>
+                                                    <connections>
+                                                        <action selector="followButtonTapped:" destination="0fe-aa-BWR" eventType="touchUpInside" id="tS0-DO-CLx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <animations/>
@@ -230,8 +236,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="followButton" destination="Auf-Nz-GgC" id="NOY-wm-2FQ"/>
+                                            <outlet property="usernameLabel" destination="Lh3-4n-V0v" id="R4r-o0-m3f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="S7H-hO-w34" id="FL6-t8-cF1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -249,6 +262,10 @@
                     <tabBarItem key="tabBarItem" title="" image="People" id="ukH-26-UpR">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="searchBar" destination="cZW-eX-dwD" id="ZIs-jl-XPI"/>
+                        <outlet property="tableView" destination="Ygt-Uj-eB6" id="qDO-u2-T4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49f-75-Pno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
