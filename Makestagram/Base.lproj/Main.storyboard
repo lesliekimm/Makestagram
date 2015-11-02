@@ -186,10 +186,19 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-Uj-eB6">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ygt-Uj-eB6" firstAttribute="leading" secondItem="A9g-Kc-A3F" secondAttribute="leading" id="2Jz-QG-Jnt"/>
+                            <constraint firstAttribute="trailing" secondItem="Ygt-Uj-eB6" secondAttribute="trailing" id="D7a-Hs-THZ"/>
+                            <constraint firstItem="bn9-Fd-VID" firstAttribute="top" secondItem="Ygt-Uj-eB6" secondAttribute="bottom" id="Grj-2A-7mF"/>
+                            <constraint firstItem="Ygt-Uj-eB6" firstAttribute="top" secondItem="cZW-eX-dwD" secondAttribute="bottom" id="QhW-M6-gtb"/>
                             <constraint firstAttribute="trailing" secondItem="cZW-eX-dwD" secondAttribute="trailing" id="dHs-Jl-fM0"/>
                             <constraint firstItem="cZW-eX-dwD" firstAttribute="top" secondItem="DKu-sr-50D" secondAttribute="bottom" id="hPf-d0-kWq"/>
                             <constraint firstItem="cZW-eX-dwD" firstAttribute="leading" secondItem="A9g-Kc-A3F" secondAttribute="leading" id="msU-0n-dH7"/>
