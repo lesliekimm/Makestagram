@@ -16,6 +16,7 @@ class Post: PFObject, PFSubclassing {
     var image: Observable<UIImage?> = Observable(nil)
     var photoUploadTask: UIBackgroundTaskIdentifier?
     var likes: Observable<[PFUser]?> = Observable(nil)
+    static var imageCache: NSCacheSwift<String, UIImage>!
     
     // defined each prop that you want to access on this Parse class
     // this allows you to change the code that accesses props through strings
@@ -38,6 +39,8 @@ class Post: PFObject, PFSubclassing {
         dispatch_once(&onceToken) {
             // inform Parse about this subclass
             self.registerSubclass()
+            // create an empty cache
+            Post.imageCache = NSCacheSwift<String, UIImage>()
         }
     }
     
@@ -67,6 +70,9 @@ class Post: PFObject, PFSubclassing {
     }
     
     func downloadImage() {
+        // attempt to assign value to image.value directly from cache - if successful, skip the rest
+        image.value = Post.imageCache[self.imageFile!.name]
+        
         // if image is not downloaded yet, get it
         // check if image.value already has a stored value (do this to avoid DL images multiple times)
         if (image.value == nil) {
@@ -76,6 +82,8 @@ class Post: PFObject, PFSubclassing {
                     let image = UIImage(data: data, scale:1.0)!
                     // once DL completes, update post.image
                     self.image.value = image
+                    // if image wasn't cached, DL image and cache
+                    Post.imageCache[self.imageFile!.name] = image
                 }
             }
         }
