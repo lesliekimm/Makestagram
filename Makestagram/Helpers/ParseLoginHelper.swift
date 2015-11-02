@@ -30,8 +30,6 @@ class ParseLoginHelper : NSObject {
 }
 
 extension ParseLoginHelper : PFLogInViewControllerDelegate {
-  
-  
   func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
     // Determine if this is a Facebook login
     let isFacebookLogin = FBSDKAccessToken.currentAccessToken() != nil
@@ -39,7 +37,8 @@ extension ParseLoginHelper : PFLogInViewControllerDelegate {
     if !isFacebookLogin {
       // Plain parse login, we can return user immediately
       self.callback(user, nil)
-    } else {
+    }
+    else {
       // if this is a Facebook login, fetch the username from Facebook
       FBSDKGraphRequest(graphPath: "me", parameters: nil).startWithCompletionHandler {
         (connection: FBSDKGraphRequestConnection!, result: AnyObject?, error: NSError?) -> Void in
@@ -61,7 +60,8 @@ extension ParseLoginHelper : PFLogInViewControllerDelegate {
                 self.callback(nil, error)
               }
             })
-          } else {
+          }
+          else {
             // cannot retrieve username? -> create error and hand it to callback
 //            let userInfo = [NSLocalizedDescriptionKey : ParseLoginHelper.usernameNotFoundLocalizedDescription]
 //            let noUsernameError = NSError(
@@ -74,13 +74,10 @@ extension ParseLoginHelper : PFLogInViewControllerDelegate {
       }
     }
   }
-  
 }
 
 extension ParseLoginHelper : PFSignUpViewControllerDelegate {
-  
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
     self.callback(user, nil)
   }
-  
 }

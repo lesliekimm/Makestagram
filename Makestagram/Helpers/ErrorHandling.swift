@@ -13,7 +13,6 @@ import ConvenienceKit
   This struct provides basic Error handling functionality.
 */
 struct ErrorHandling {
-  
   static let ErrorTitle           = "Error"
   static let ErrorOKButtonTitle   = "Ok"
   static let ErrorDefaultMessage  = "Something unexpected happened, sorry for that!"
@@ -37,5 +36,4 @@ struct ErrorHandling {
       ErrorHandling.defaultErrorHandler(error)
     }
   }
-  
 }
