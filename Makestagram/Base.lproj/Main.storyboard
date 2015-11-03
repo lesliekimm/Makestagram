@@ -133,7 +133,7 @@
                                             <outlet property="postImageView" destination="Jil-yh-92p" id="5xy-q7-OaM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeader" rowHeight="40" id="WcI-2X-drr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostHeader" rowHeight="40" id="WcI-2X-drr" customClass="PostSectionHeaderView" customModule="Makestagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="498" width="600" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WcI-2X-drr" id="H3t-SM-f83">
@@ -175,6 +175,10 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="postTimeLabel" destination="gHx-8S-xsU" id="otZ-Di-8I1"/>
+                                            <outlet property="usernameLabel" destination="juZ-BP-2x4" id="ca0-pe-qSt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
